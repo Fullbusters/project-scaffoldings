@@ -1,2 +1,5 @@
 node_modules
 stylelint.config.js
+dist/*
+src/bootstrap.min.css
+jquery-3.3.1.min.js

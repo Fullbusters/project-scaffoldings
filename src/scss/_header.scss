@@ -1,0 +1,78 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(253, 249, 249);
+    height: 80px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    font-size: 25px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 3%;
+
+    ul {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px
+    }
+
+    li {
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+        list-style-type: none;
+    }
+
+    .custom-search-input{
+        width: 200px;
+        height: 32px;
+        padding: 3px;
+        padding-left: 15px;
+        margin-left: auto;  
+        border: solid 1px #E4E4E4;
+        border-radius: 15.5px;
+        background-color: #fff;
+        
+        .size {
+            height: 20px;
+            font-size: 13px;
+            padding: 3px;
+        }
+    }
+    
+    .custom-search-input input{
+       
+        border: 0;
+        box-shadow: none;
+    }
+    
+    .custom-search-input button{
+        margin: -5px 0 0 0;
+        background: none;
+        box-shadow: none;
+        border: 0;
+        color: #666666;
+        padding: 0 4px 0  7px;
+        border-left: solid 1px #ccc;
+    }
+    
+    .custom-search-input button:hover{
+        border: 0;
+        box-shadow: none;
+        border-left: solid 1px #ccc;
+    }
+    
+    .fas fa-search{
+        font-size: 13px;
+    }
+}
+
+

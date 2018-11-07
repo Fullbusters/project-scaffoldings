@@ -5,9 +5,42 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="src/normalize.css" type="text/css"/> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="src/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Historical Sight</title>
+  <title>Regions</title>
+  <script>
+    const url = 'http://localhost:6060/api/region';
+const xmlhttp = new XMLHttpRequest();
+
+const getOneRegion = function (id) {
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      const myArr = JSON.parse(this.responseText);
+      console.log(myArr);
+      myFunction(myArr);
+    }
+  };
+  
+  xmlhttp.open('GET', url + '/' + id, true);
+  xmlhttp.send();
+
+  function myFunction (arr) {
+    let out = '';
+     out += '<li onclick="fn(' + arr.id + 
+      ')"><span class="primary-btn "> ' + arr.title + '</span></li>';
+
+    document.getElementById('generates').innerHTML = out;
+  }
+};
+
+    const fn = function (id) {
+      console.log(id);
+      getOneRegion(id);
+    }
+
+
+
+    </script>
 </head>
 <body>
     <div class="container">
@@ -21,7 +54,7 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="region.html" >Regions</a>
+              <a href="region.html">Regions</a>
             </li>
             <li>
               <a href="help.html">Help</a>
@@ -43,20 +76,13 @@
       </header>
       <main class="content">
         <div class="unnamed">
-          <div class="main-info">
-            
-              <img src="https://s005.radikal.ru/i209/1307/d6/53779c2b11f1.jpg" alt="">
-              <span>
-                  Site with information about all historical places of Ukraine. For finding outstanding places will move to the tab .
-              </span>
-          </div>
+          <ul class="nav-regions" id="generate">
+          </ul>
+          <ul class="nav-regions" id="generates">
+            </ul>
         </div>
       </main>
-
     </div>
-
-
-
-<script src="./src/jquery-3.3.1.min.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>

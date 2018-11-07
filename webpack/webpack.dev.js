@@ -30,7 +30,7 @@ module.exports = {
           {
             loader: 'css-loader', // translates CSS into CommonJS
             query: {
-              modules: true,
+              modules: false,
               camelCase: true,
               localIdentName: '[name]__[local]___[hash:base64:5]'
             }
@@ -46,6 +46,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve('./index.html')
     }),
+    new HtmlWebpackPlugin({
+      filename: 'region.html',
+      template: path.resolve('./region.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'help.html',
+      template: path.resolve('./help.html')
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, '../'),

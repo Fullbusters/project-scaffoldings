@@ -1,0 +1,11 @@
+a {
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+}
+
+@import '_header.scss';
+@import '_index-content.scss';
