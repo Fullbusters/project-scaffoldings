@@ -1,11 +1,262 @@
-a {
-    color: rgb(0, 0, 0);
+@import "base/_variables";
+@import "base/_base";
+@import "layout/_side";
+
+.content {
+    min-height: 95vh;
+    padding: 1%;
+    background-image: url('../bg.jpg');
+    background-size: 100% 100%;
+    
 }
 
-a:hover {
-    text-decoration: none;
-    color: rgb(128, 128, 128);
+.scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #494949;
+    }
 }
 
-@import '_header.scss';
-@import '_index-content.scss';
+.pd5 {
+    padding: 5px;
+}
+
+.banner {
+    text-align: center;
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 9em 0 4em 0;
+
+}
+
+.title {
+    text-align: center;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    border-left: 0;
+    border-right: 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2.35em;
+    font-weight: 700;
+    line-height: 1.3em;
+    margin: 0 0 1.5em 0;
+
+    strong {
+        font-weight: 800;
+        color: inherit;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        border-top: solid 1px;
+        border-color: #888;
+        border-color: rgba(255, 255, 255, 0.25);
+        margin: 10px 0 1.25em 0;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: solid 1px;
+        border-color: #888;
+        border-color: rgba(255, 255, 255, 0.25);
+        margin: 1.25em 0 10px 0;
+    }
+}
+
+.city-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    li {
+        margin: 2%;
+        margin-top: 2%;
+        list-style-type: none;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.primary-btn{
+	background: white;
+	border:1px solid transparent;
+	color: black;
+	padding-left: 40px;
+	padding-right: 40px;	
+    border-radius:50px;
+    line-height: 36px;
+    font-weight: 500;
+	&:hover{
+		border:1px solid  white;
+		background:transparent;
+		color: white;
+	}
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.city-info {
+    min-height: 80vh;
+    background-image: url('/src/citybg.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 1%;
+
+    h1 {
+        color: #fff;
+    }
+}
+
+.list-HS {
+    height: 500px;
+}
+
+  
+.title-HS {
+    font-weight: bold;
+    position: relative;
+    top: 12px;
+    font-size: 1.2em;
+    height: 10vh;
+}
+
+.list-HS {
+    padding: 1%;
+}
+  
+.list {
+    width: 100%;
+    background: #2d0381;
+    padding: 2px 5px 2px 55px;
+    box-sizing: border-box;
+    border: #fff;
+
+    font-weight: lighter;
+    cursor: pointer;
+
+    ul {
+        transition: all ease 1s;
+        max-height: 0px;
+        list-style-type: none;
+        overflow: hidden;
+        padding: 0;
+        list-style: none;
+
+        li {
+            list-style-type: none;
+        }
+    }
+      
+    .open {
+        min-height: 55vh;
+    }
+      
+    ul li:first-child {
+        margin-top: 15px;
+    }
+      
+    .list:not(:first-child) {
+        margin-top: 5px;
+    }
+      
+    .image {
+        height: 30%;
+        width: 30%;
+    }
+    
+}
+  
+  
+
+@media (max-width: 1200px) {
+
+    .banner {
+        width: 100%;
+        padding: 8em 0 2em 0;
+
+        p {
+            font-size: 1.25em;
+            line-height: 1.75em;
+            letter-spacing: 0.04em;
+            float: none;
+            text-align: center;
+            width: 100%;
+            margin: 0 0 2em 0;
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2.2em;
+        line-height: 1.3em;
+        margin: 0 0 1em 0;
+    }
+}
+
+
+@media (max-width: 920px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+    .banner {
+        padding: 8em 0 4em 0;
+
+        br {
+            display: none;
+        }
+    }
+
+    .city-list {
+        .li {
+            font-size: 1rem;
+        }
+    }
+    
+    .title-HS {
+        top: 0px;
+    }
+
+    .list {
+        padding: 5px;
+
+        .image {
+            height: 60%;
+            width: 60%;
+        }
+    }
+    
+    .list-HS {
+        padding: 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner {
+        padding: 50% 20px 40px 20px;
+
+    }
+
+    .title {
+        text-align: center;
+        font-size: 18pt !important;
+    }
+}

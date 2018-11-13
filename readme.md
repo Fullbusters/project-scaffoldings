@@ -28,8 +28,8 @@ Main idea of the project:
 ## TODO
 
 * Create page when developer can add information about historical sight
-* Improve html/css for a better look
-* Сreate beautiful mockups 
+* To make the project work not only with the local database
+* 
 
 ## Link to heroku (in progress)
 

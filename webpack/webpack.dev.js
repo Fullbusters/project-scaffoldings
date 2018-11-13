@@ -39,20 +39,18 @@ module.exports = {
             loader: 'sass-loader' // compiles Sass to CSS
           }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('./index.html')
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'region.html',
-      template: path.resolve('./region.html')
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'help.html',
-      template: path.resolve('./help.html')
     })
   ],
   devServer: {

@@ -2,61 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="src/normalize.css" type="text/css"/> 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="src/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <title>Historical Sight</title>
 </head>
 <body>
-    <div class="container">
-      <header class="app-header">
-        <div class="name">
-          Historical Sight
+  <div class="body-container container-fluid">
+    <a class="menu-btn" href="javascript:void(0)">
+      <i class="fas fa-bars"></i>
+    </a>
+    <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-3 col-12 menu_block vh100 position-fixed">
+        <div class="logo_box">
+          <a href="index.html">
+            <img src="src/img/logo.png" alt="cocoon">
+          </a>
         </div>
-        <nav class="menu">
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="region.html" >Regions</a>
-            </li>
-            <li>
-              <a href="help.html">Help</a>
-            </li>
-            <li>
-              <div class="custom-search-input">
-                <div class="input-group ">
-                    <input type="text" class="form-control input-lg size" placeholder="Enter Keywords" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-              </div> 
-            </li>
+        <div class="side_menu_section vh85">
+          <ul class="menu_nav vh85 scrollbar" id="regions-list">
+              <div class="force-overflow"></div>
           </ul>
-        </nav>
-      </header>
-      <main class="content">
-        <div class="unnamed">
-          <div class="main-info">
-            
-              <img src="https://s005.radikal.ru/i209/1307/d6/53779c2b11f1.jpg" alt="">
-              <span>
-                  Site with information about all historical places of Ukraine. For finding outstanding places will move to the tab .
-              </span>
-          </div>
+        </div>        
+      </div>
+      <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center pd5">
+        <div class="content" id="content" >    
         </div>
-      </main>
+        <div id="city-info">
 
+        </div>
+      </div>
     </div>
-
-
-
-<script src="./src/jquery-3.3.1.min.js"></script>
+  </div>
+<script src="/src/js/jquery.min.js"></script>
 </body>
 </html>
